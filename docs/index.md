@@ -1,8 +1,8 @@
 ## Welcome to GitHub Pages
 
-### [基本的な書き込みとフォーマットの構文](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+### [基本的な書き込みとフォーマットの構文(origine)](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
-### [md using](./formatting-syntax.md)
+### [基本的な書き込みとフォーマットの構文](./formatting-syntax.md)
 
 You can use the [editor on GitHub](https://github.com/qsekki/qsekki.github.io/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
