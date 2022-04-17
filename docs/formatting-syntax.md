@@ -1,6 +1,6 @@
 <div class="hx">
 
-# JavaScript 基本事項
+# 基本的な書き込みとフォーマットの構文
 
 </div><div class="sect"><hr>
 
