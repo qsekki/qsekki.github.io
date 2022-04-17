@@ -82,11 +82,11 @@
 
 ### [arkdown のフォーマットの無視](#20)
 
-</div>div class="sect"><hr>
+</div><div class="sect"><hr>
 
 ### [Disabling Markdown rendering](#21)
 
-</div>div class="sect"><hr>
+</div><div class="sect"><hr>
 
 ### [参考リンク](#22)
 
