@@ -22,7 +22,7 @@
 
 ### [リンク](#05)
 
-</div><<div class="sect"><hr>
+</div><div class="sect"><hr>
 
 ### [セクションリンク](#06)
 
