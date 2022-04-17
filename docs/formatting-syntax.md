@@ -4,219 +4,92 @@
 
 </div><div class="sect"><hr>
 
-### [JavaScriptとは](#01)
+### [ヘッディング JavaScriptとは](#01)
 
 </div><div class="sect"><hr>
 
-### [JavaScriptとは](#01)
+### [スタイル付きテキスト](#02)
 
 </div><div class="sect"><hr>
 
-### [JavaScriptコードの組み込み方法](#02)
+### [テキストの引用](#03)
 
 </div><div class="sect"><hr>
 
-### [コメント記述方法・２種類](#03)
+### [コードの引用](#04)
 
 </div><div class="sect"><hr>
 
-### [データ型について](#04)
+### [リンク](#05)
+
+</div><<div class="sect"><hr>
+
+### [セクションリンク](#06)
+
+</div><div class="sect"><hr>
+
+### [相対リンク](#07)
+
+</div><div class="sect"><hr>
+
+### [Images](#08)
+
+</div><div class="sect"><hr>
+
+### [リスト](#09)
+
+</div><div class="sect"><hr>
+
+### [タスクリスト](#10)
+
+</div><div class="sect"><hr>
+
+### [ヘッディング](#11)
+
+</div><div class="sect"><hr>
+
+### [人や Team のメンション](#12)
+
+</div><div class="sect"><hr>
+
+### [Issue およびプルリクエストの参照](#13)
+
+</div><div class="sect"><hr>
+
+### [外部リソースの参照](#14)
+
+</div><div class="sect"><hr>
+
+### [アセットをアップロードする](#15)
+
+</div><div class="sect"><hr>
+
+### [絵文字の利用](#16)
+
+</div><div class="sect"><hr>
+
+### [パラグラフ](#17)
+
+</div><div class="sect"><hr>
+
+### [Footnotes](#18)
+
+</div><div class="sect"><hr>
+
+### [Hiding content with comments](#19)
+
+</div><div class="sect"><hr>
+
+### [arkdown のフォーマットの無視](#20)
+
+</div>div class="sect"><hr>
+
+### [Disabling Markdown rendering](#21)
+
+</div>div class="sect"><hr>
+
+### [参考リンク](#22)
 
 </div>
 
-<!--/////////////////////-->
-<br><canvas width="20" height="2000" style="border: none;"></canvas>
-<style>
-body {
-    max-width:800px;
-    margin-right: auto;
-    margin-left : auto;
-    font-size: 18px;
-    /*color: white; color:black;***********/
-    /*color: deepskyblue;*/
-    line-height: 1.5em
-    /*
-    font-family: 'Hiragino Kaku Gothic ProN', Meiryo, Helvetica, Arial, sans-serif;
-    */
-}
-pre {
-    /*background-color: #f8f8ff;*/
-}
-pre code {
-    /*color: white; color: black;***********/
-    /*color: deepskyblue;*/
-    /*background-color: #f8f8ff;*/
-    font-size: 18px;
-    line-height: 1.2em
-}
 
-code {
-    /*background-color: #f8f8ff;*/
-    /*font-size: 15px;*/
-}
-
-.hljs-comment {
-    font-style: normal;
-    /*color: orange; color:darkred;*********/
-    color: orange;
-}
-
-/*---リストの行間を設定---*/
-li{
-    margin-top: .2em;
-    margin-bottom: .2em;
-}
-
-/*---見出し--- 見出しと見出しの大きさに対応するクラス名---*/
-
-div.hx{
-    margin-top: 1%;
-    margin-bottom: 1%;
-}
-
-div.hx h1{
-    padding: .2em;
-    background-color: dodgerblue;
-    color: white;
-}
-div.hx h2{
-    padding: .2em;
-    background-color: blue;
-    color: white;
-}
-div.hx h3{
-    padding-left: .2em;
-    padding-right: .2em;
-    background-color: darkblue;
-    color: white;
-}
-div.hx h4{
-    border-bottom: 1px solid orange;
-    border-left: 8px solid orange;
-    padding-left: .4em;
-    padding-right: .4em;
-    background-color: beige;
-    color: black;
-}
-/*---表---*/
-table{
-    background-color: darkgreen;
-    border-collapse: separate;
-    border: 0px solid darkgreen;
-    border-spacing: 2px;
-    color: black;
-}
-th{
-    background-color: lightgreen;
-    color: black;
-}
-td{
-    background-color: lightcyan;
-    padding: 0 .3em;
-}
-
-tr:nth-child(2n) td{
-    background-color: cornsilk;
-}
-/*---水平線を利用した章と節の連番---*/
-body {
-  counter-reset: chap- 0;
-  /*width: 40em;*/
-}
-div.chapx {
-  counter-reset: chap- 0;
-}
-
-div.chap {
-  margin-top: 1%;
-  margin-bottom: 1%;
-  text-align: center;
-  counter-increment: chap-;
-  counter-reset: sect- 0;
-}
-
-div.chap hr {
-  margin: 0;
-  border: none;
-  /*text-align: left;*/
-  background-color: #666;
-  color: white;
-  line-height: 1.5em;
-  padding: .5em 0 .2em .2em;
-}
-
-div.chap hr::before {
-  content: counter(chap-);/* "章."*/
-}
-
-div.chapx {
-  /*■■■■■■■■■■■*/
-  counter-reset: chap- 0;
-}
-
-div.sectx {
-  /*■■■■■■■■■■■*/
-  counter-reset: sect- 0;
-}
-
-div.sect {
-  margin-top: 1%;
-  margin-bottom: 1%;
-  text-align: center;
-  counter-increment: sect-;
-}
-div.sect hr {
-  margin: 0;
-  border: none;
-  /*text-align: left;*/
-  background-color: silver;
-  color: white;
-  line-height: 1.0em;
-  padding: .5em 0 .2em .2em;
-}
-
-div.sect hr::before {
-  content: counter(chap-) "-" counter(sect-);
-}
-
-
-/*---赤色強調表示---*/
-span.red- {
-  color: red;
-  font-weight: bold;
-}
-div.cent {
-  margin-top: 1%;
-  margin-bottom: 1%;
-  text-align: center;
-}
-div.cent hr {
-  margin: 0;
-}
-/*---青色強調表示---*/
-span.blue- {
-  color: lightblue;
-  font-weight: bold;
-}
-/*---黄色強調表示---*/
-span.yellow- {
-  color: darkred;
-  background-color: yellow;
-  padding: 0 .3em;
-  font-weight: bold;
-}
-/*---黄色強調表示---*/
-div.yellow- {
-  color: darkred;
-  background-color: yellow;
-  padding: .1em .3em;
-  font-weight: bold;
-}
-/*---白抜き深緑色強調中央表示---*/
-div.dark- {
-  color: white;
-  background-color: darkgreen;
-  font-weight: bold;
-  text-align: center;
-}
-</style>
