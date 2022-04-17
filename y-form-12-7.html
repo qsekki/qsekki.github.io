@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML: フォーム</title>
+
+    <!---->
+    <link
+      rel="stylesheet"
+      id="theme"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/ClearnessDark.css"
+    />
+    <!--->
+
+    <!--
+    <link rel="stylesheet" id="theme" href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/Clearness.css">
+    -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/MarkdownTOC.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="chap">
+      <hr />
+      <a href="./index.html"> Home </a>
+    </div>
+    <div class="hx">
+      <h2 id="html-フォーム">HTML: フォーム</h2>
+    </div>
+    <div class="sect"><hr /></div>
+    <div class="hx">
+      <h3 id="html-input-typereset--リセットボタンを作成する">
+        HTML: &lt;input type="reset" &gt; リセットボタンを作成する
+      </h3>
+    </div>
+
+    <p>
+      リセットボタンを作成する場合は、input要素のtype属性に"reset"を指定します。
+    </p>
+    <p>
+      リセットボタンを押すと、フォームに入力したデータがリセットされ、初期状態に戻ります。
+    </p>
+    <div class="hx">
+      <h4 id="属性">属性</h4>
+    </div>
+
+    <p><strong>value属性</strong></p>
+    <p>
+      リセットボタンに表示するテキストを設定します。デフォルト値はブラウザによって違います。
+    </p>
+    <div class="hx">
+      <h4 id="使用例">使用例</h4>
+    </div>
+
+    <h4 id="html">HTML</h4>
+    <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">accept</span>=<span class="hljs-string">"sample.php"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>リセットボタンです<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"reset"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"リセットする"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>IEでvalue属性を指定しない場合<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"reset"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+    <h4 id="表示結果">表示結果</h4>
+    <form method="post" accept="sample.php">
+      <p>リセットボタンです</p>
+      <p><input value="リセットする" type="reset" /></p>
+
+      <p>IEでvalue属性を指定しない場合</p>
+      <p><input type="reset" /></p>
+    </form>
+
+    <p><br /><canvas style="border: none" height="2000" width="20"></canvas></p>
+  </body>
+</html>

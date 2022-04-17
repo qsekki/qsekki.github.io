@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML: フォーム</title>
+
+    <!---->
+    <link
+      rel="stylesheet"
+      id="theme"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/ClearnessDark.css"
+    />
+    <!--->
+
+<!--
+<link rel="stylesheet" id="theme" href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/Clearness.css">
+-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/MarkdownTOC.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="chap">
+      <hr />
+      <a href="./index.html"> Home </a>
+    </div>
+    <div class="hx">
+      <h2 id="html-フォーム">HTML: フォーム</h2>
+    </div>
+    
+    <div class="sect"><hr /></div>
+    <div class="hx">
+      <h4 id="html-フォーム部品の一覧・まとめ">
+        HTML: フォーム部品の一覧・まとめ
+      </h4>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th align="left">
+            <div style="text-align: center">フォーム部品</div>
+          </th>
+          <th align="left"><div style="text-align: center">表示</div></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left"><div class="dark-">フォーム・他</div></td>
+          <td align="left"><div class="dark-">　</div></td>
+        </tr>
+        <tr>
+          <td align="left"><a href="#form">フォーム</a></td>
+          <td align="left">なし</td>
+        </tr>
+        <tr>
+          <td align="left"><a href="#hidden">隠し属性</a></td>
+          <td align="left">なし</td>
+        </tr>
+        <tr>
+          <td align="left"><div class="dark-">テキスト・数値入力</div></td>
+          <td align="left"><div class="dark-">　</div></td>
+        </tr>
+        <tr>
+          <td align="left"><a href="#tbox">テキストボックス（1行）</a></td>
+          <td align="left">
+            <input
+              style="margin: 6px"
+              placeholder="入力ヒント"
+              value="qqq"
+              name="user-name"
+              type="text"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><a href="#tarea">テキストエリア（複数行）</a></td>
+          <td align="left">
+            <textarea style="margin: 6px" rows="3" cols="20" name="lines-name">
+初期表示テキスト</textarea
+            >
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><a href="#num">数値入力フィールド</a></td>
+          <td align="left">
+            <input
+              style="margin: 6px"
+              step="1"
+              value="0"
+              min="0"
+              name="n-name"
+              type="number"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><a href="#passw">パスワード入力フィールド</a></td>
+          <td align="left">
+            <input style="margin: 6px" name="p-name" type="password" />
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><div class="dark-">チェック</div></td>
+          <td align="left"><div class="dark-">　</div></td>
+        </tr>
+        <tr>
+          <td align="left"><a href="#chbox">チェックボックス</a></td>
+          <td align="left">
+            <div style="margin: 6px">
+              <input
+                checked=""
+                value="value1"
+                name="categoryA"
+                type="checkbox"
+              />チェック1<br /><input
+                value="value2"
+                name="categoryA"
+                type="checkbox"
+              />チェック2
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><a href="#radio">ラジオボタン</a></td>
+          <td align="left">
+            <div style="margin: 6px">
+              <input
+                value="value1"
+                name="categoryB"
+                type="radio"
+              />ラジオ1&nbsp;<input
+                value="value2"
+                name="categoryB"
+                type="radio"
+              />ラジオ2
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><div class="dark-">リスト</div></td>
+          <td align="left"><div class="dark-">　</div></td>
+        </tr>
+        <tr>
+          <td align="left"><a href="#drop">ドロップダウンメニュー</a></td>
+          <td align="left">
+            <select style="margin: 6px">
+              <option selected="" value="v1">リスト1</option>
+              <option value="v2">リスト2</option>
+              <option value="v3">リスト3</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><a href="#list">リストボックス</a></td>
+          <td align="left">
+            <select style="margin: 6px" size="3">
+              <option selected="" value="v1">リスト1</option>
+              <option value="v2">リスト2</option>
+              <option value="v3">リスト3</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><a href="#multi">リストボックス（複数選択）</a></td>
+          <td align="left">
+            <select style="margin: 6px" multiple="" size="3">
+              <option selected="" value="v1">リスト1</option>
+              <option value="v2">リスト2</option>
+              <option value="v3">リスト3</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><div class="dark-">ボタン</div></td>
+          <td align="left"><div class="dark-">　</div></td>
+        </tr>
+        <tr>
+          <td align="left"><a href="#nbtn">汎用ボタン</a></td>
+          <td align="left">
+            <input
+              style="margin: 6px"
+              value="汎用ボタン"
+              name="nbtn"
+              type="button"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><a href="#sbtn">送信ボタン</a></td>
+          <td align="left">
+            <input style="margin: 6px" value="送信" name="sbtn" type="submit" />
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><a href="#rbtn">リセットボタン</a></td>
+          <td align="left">
+            <input
+              style="margin: 6px"
+              value="リセット"
+              name="rbtn"
+              type="reset"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><a href="#cbtn">色の選択ボタン</a></td>
+          <td align="left">
+            <input
+              style="margin: 6px"
+              value="#ff0000"
+              name="cbtn"
+              type="color"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td align="left"><a href="#fbtn">ファイル選択ボタン</a></td>
+          <td align="left">
+            <input style="margin: 6px" name="fbtn" type="file" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <a id="form"></a>
+
+    <h3 id="フォーム"><span class="yellow-">フォーム</span></h3>
+    <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"送信先URL"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"GET"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- フォーム部品 --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+    <p>
+      通常はform要素を親要素として、その中にフォーム部品を記述していきます。
+    </p>
+    <p>
+      action属性には内容を送信する送信先のURLを記述します。method属性は送信方法である「<strong>GET</strong>」か「<strong>POST</strong>」を指定します。
+    </p>
+    <p><a id="hidden"></a></p>
+    <h3 id="隠し属性"><span class="yellow-">隠し属性</span></h3>
+    <pre><code>&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"hidden"</span> name=<span class="hljs-string">"hidden"</span> value=<span class="hljs-string">"この部分が送信されます"</span>&gt;
+</code></pre>
+    <p>
+      隠し属性はユーザーID等、画面に表示することなく情報を送信したい場合に使用します。
+    </p>
+    <p>「value属性」で送信する情報を指定します。</p>
+    <p><a id="tbox"></a></p>
+    <h3 id="テキストボックス（1行）">
+      <span class="yellow-">テキストボックス（1行）</span>
+    </h3>
+    <pre><code>&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"text"</span> name=<span class="hljs-string">"user-name"</span> value=<span class="hljs-string">""</span> placeholder=<span class="hljs-string">"入力ヒント"</span>&gt;
+</code></pre>
+    <p>
+      テキストボックス（テキストフォールド）を表示する場合は、
+      type属性に「text」を指定します。
+      入力ヒントを表示したい場合はHTML5から追加された
+      「<strong>placeholder属性</strong>」を使用すると便利です。
+    </p>
+    <p>
+      <a href="https://step-learn.com/article/javascript/174-text-value.html"
+        >JavaScript: テキストボックス・テキストエリアの値を取得・設定する</a
+      >
+    </p>
+    <p><a id="tarea"></a></p>
+    <h3 id="テキストエリア（複数行）">
+      <span class="yellow-">テキストエリア（複数行）</span>
+    </h3>
+    <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">"20"</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">"3"</span>&gt;</span>初期表示テキスト<span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+</code></pre>
+    <p><a id="num"></a></p>
+    <h3 id="数値入力フィールド">
+      <span class="yellow-">数値入力フィールド</span>
+    </h3>
+    <pre><code>&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"tnumber"</span> name=<span class="hljs-string">"name"</span> <span class="hljs-built_in">min</span>=<span class="hljs-string">"0"</span> value=<span class="hljs-string">"0"</span> step=<span class="hljs-string">"1"</span>&gt;
+</code></pre>
+    <p>
+      数値入力フィールドは基本的には整数を扱うフィールドですが、マイナスの値や小数点以下の数値も扱えます。
+    </p>
+    <p>「step属性」で数値のステップを指定します（デフォルトは1）。</p>
+    <p><a id="passw"></a></p>
+    <h3 id="パスワード入力フィールド">
+      <span class="yellow-">パスワード入力フィールド</span>
+    </h3>
+    <pre><code>&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"password"</span> name=<span class="hljs-string">"name"</span>&gt;
+</code></pre>
+    <p>
+      パスワード入力フィールドの場合、画面上は「●」や「※」に置き換えて表示されます。
+    </p>
+    <p><a id="chbox"></a></p>
+    <h3 id="チェックボックス"><span class="yellow-">チェックボックス</span></h3>
+    <pre><code>&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"checkbox"</span> name=<span class="hljs-string">"categoryA"</span> value=<span class="hljs-string">"value1"</span> checked&gt;チェック<span class="hljs-number">1</span>
+&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"checkbox"</span> name=<span class="hljs-string">"categoryA"</span> value=<span class="hljs-string">"value2"</span>&gt;チェック<span class="hljs-number">2</span>
+</code></pre>
+    <p>
+      チェック印は「checked」でも「checked="checked"」でもどちらでも構いません。
+    </p>
+    <p>
+      <a href="https://step-learn.com/article/javascript/166-check-value.html"
+        >JavaScript: チェックボックスの値を取得・設定する</a
+      >
+    </p>
+    <p><a id="radio"></a></p>
+    <h3 id="ラジオボタン"><span class="yellow-">ラジオボタン</span></h3>
+    <pre><code>&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"categoryA"</span> value=<span class="hljs-string">"value1"</span> checked&gt;ラジオ<span class="hljs-number">1</span>
+&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"categoryA"</span> value=<span class="hljs-string">"value2"</span>&gt;ラジオ<span class="hljs-number">2</span>
+</code></pre>
+    <p>
+      チェック印は「checked」でも「checked="checked"」でもどちらでも構いません。
+    </p>
+    <p>
+      <a href="https://step-learn.com/article/javascript/181-radio-value.html"
+        >JavaScript: ラジオボタンの値を取得・設定する</a
+      >
+    </p>
+    <p><a id="drop"></a></p>
+    <h3 id="ドロップダウンメニュー">
+      <span class="yellow-">ドロップダウンメニュー</span>
+    </h3>
+    <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"v1"</span> <span class="hljs-attr">selected</span>&gt;</span>リスト1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"v2"</span>&gt;</span>リスト2<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"v3"</span>&gt;</span>リスト3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+</code></pre>
+    <p>「selected属性」を指定した要素の値が表示されます。</p>
+    <p>
+      <a href="https://step-learn.com/article/javascript/165-select-value.html"
+        >JavaScript: セレクトボックスの値を取得・設定する</a
+      >
+    </p>
+    <p><a id="list"></a></p>
+    <h3 id="リストボックス"><span class="yellow-">リストボックス</span></h3>
+    <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"v1"</span> <span class="hljs-attr">selected</span>&gt;</span>リスト1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"v2"</span>&gt;</span>リスト2<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"v3"</span>&gt;</span>リスト3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+</code></pre>
+    <p>
+      「size属性」を指定することでリストボックスになり、「selected属性」を指定した要素が選択状態となります。
+    </p>
+    <p>
+      <a href="https://step-learn.com/article/javascript/165-select-value.html"
+        >JavaScript: セレクトボックスの値を取得・設定する</a
+      >
+    </p>
+    <p><a id="multi"></a></p>
+    <h3 id="リストボックス（複数選択）">
+      <span class="yellow-">リストボックス（複数選択）</span>
+    </h3>
+    <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"3"</span> <span class="hljs-attr">multiple</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"v1"</span> <span class="hljs-attr">selected</span>&gt;</span>リスト1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"v2"</span>&gt;</span>リスト2<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"v3"</span>&gt;</span>リスト3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+</code></pre>
+    <p><a id="nbtn"></a></p>
+    <h3 id="汎用ボタン"><span class="yellow-">汎用ボタン</span></h3>
+    <pre><code>&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"button"</span> name=<span class="hljs-string">"name"</span> value=<span class="hljs-string">"汎用ボタン"</span>&gt;
+</code></pre>
+    <p><a id="sbtn"></a></p>
+    <h3 id="送信ボタン"><span class="yellow-">送信ボタン</span></h3>
+    <pre><code>&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"submit"</span> name=<span class="hljs-string">"name"</span> value=<span class="hljs-string">"送信"</span>&gt;
+</code></pre>
+    <p>「value属性」の初期値はブラウザによって異なります。</p>
+    <p>
+      送信ボタンを押すと、form要素で指定したaction属性のプログラムが実行されます。
+    </p>
+    <p><a id="rbtn"></a></p>
+    <h3 id="リセットボタン"><span class="yellow-">リセットボタン</span></h3>
+    <pre><code>&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"reset"</span> name=<span class="hljs-string">"name"</span> value=<span class="hljs-string">"リセット"</span>&gt;
+</code></pre>
+    <p>「value属性」の初期値はブラウザによって異なります。</p>
+    <p>
+      リセットボタンを押すと、フォームに入力したデータがリセットされ、初期状態に戻ります
+    </p>
+    <p><a id="cbtn"></a></p>
+    <h3 id="色の選択ボタン"><span class="yellow-">色の選択ボタン</span></h3>
+    <pre><code>&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"color"</span> name=<span class="hljs-string">"color"</span> value=<span class="hljs-string">"#ff0000"</span>&gt;
+</code></pre>
+    <p>value属性」のデフォルトは"#000000"。</p>
+    <p><a id="fbtn"></a></p>
+    <h3 id="ファイル選択ボタン">
+      <span class="yellow-">ファイル選択ボタン</span>
+    </h3>
+    <pre><code>&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"file"</span> name=<span class="hljs-string">"filename"</span>
+</code></pre>
+    <p>
+      type="file"を指定する場合は、formタグに「method="post"」と、「enctype="multipart/form-data"」を指定します。
+    </p>
+    <br><canvas width="20" height="2000" style="border: none;"></canvas>
+  </body>
+</html>

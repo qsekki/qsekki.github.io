@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML: フォーム</title>
+
+    <!---->
+    <link
+      rel="stylesheet"
+      id="theme"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/ClearnessDark.css"
+    />
+    <!--->
+
+<!--
+<link rel="stylesheet" id="theme" href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/Clearness.css">
+-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/MarkdownTOC.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="chap">
+      <hr />
+      <a href="./index.html"> Home </a>
+    </div>
+    <div class="hx">
+      <h2 id="html-フォーム">HTML: フォーム</h2>
+    </div>
+    <div class="sect"><hr /></div>
+    <div class="hx">
+      <h3 id="html-ラジオボタンをラベルで囲む">
+        HTML: ラジオボタンをラベルで囲む
+      </h3>
+    </div>
+
+    <div class="hx">
+      <h4 id="htmlラジオボタンはラベルで囲むと選択しやすくなる">
+        HTMLラジオボタンはラベルで囲むと選択しやすくなる
+      </h4>
+    </div>
+    HTMLのラジオボタンを設定する場合は、
+    ラベル（labelタグ）で囲むと選択できる範囲が広がるので、
+    ユーザーが選択しやすくなります。
+
+    <p>
+      次のサンプルコードでは ラジオボタン2つをそれぞれlabelタグで囲んでいます
+      （value属性は省略）。 わかりやすいように、
+      labelタグを赤色の線で囲っていて、
+      枠線内をクリックすることでラジオボタンを選択することができます。
+    </p>
+    <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"test"</span> <span class="hljs-attr">checked</span>&gt;</span>選択肢A<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"test"</span>&gt;</span>選択肢B<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+</code></pre>
+    <h4 id="ラベルの有無の違いを試す">ラベルの有無の違いを試す</h4>
+    <p>
+      <label style="color: red">
+        <input checked="" name="test" type="radio" />
+        選択肢A(labelあり)
+      </label>
+      <input name="test" type="radio" />選択肢B(labelなし)
+    </p>
+    <pre><code>&lt;label style=<span class="hljs-string">"color:red"</span>&gt;&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"test"</span> checked&gt;選択肢A(labelあり)&lt;/<span class="hljs-built_in">input</span>&gt;&lt;/label&gt;
+&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"test"</span>&gt;選択肢B(labelなし)&lt;/<span class="hljs-built_in">input</span>&gt;
+</code></pre>
+    <p>
+      もしラベルが無い場合は、
+      下図のように、チェックボックスの丸の内側をクリックしないと
+      選択されません。
+    </p>
+    <p>
+      <img
+        alt="ラベルで囲むと選択できる範囲が広がる"
+        src="https://step-learn.com/img/img04/2021-0914-01.png"
+      />
+    </p>
+    <p>
+      ユーザーにとって選択しやすいのは明らかにラベルがある方です。
+      ですからHTMLフォームにラジオボタンを配置する場合は、
+      ラベルとワンセットで設置しましょう。
+    </p>
+
+    <p><br /><canvas style="border: none" height="2000" width="20"></canvas></p>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML: フォーム</title>
+
+    <!---->
+    <link
+      rel="stylesheet"
+      id="theme"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/ClearnessDark.css"
+    />
+    <!--->
+
+    <!--
+    <link rel="stylesheet" id="theme" href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/Clearness.css">
+    -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/MarkdownTOC.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="chap">
+      <hr />
+      <a href="./index.html"> Home </a>
+    </div>
+    <div class="hx">
+      <h2 id="html-フォーム">HTML: フォーム</h2>
+    </div>
+    <div class="sect"><hr /></div>
+    <div class="hx">
+      <h3 id="css-textareaのサイズ変更を不可（固定）にする">
+        CSS: textareaのサイズ変更を不可（固定）にする
+      </h3>
+    </div>
+
+    <p>
+      textarea要素のサイズを固定して、サイズ変更が出来ないようにすには、
+      CSSのresizeプロパティを使用します。
+    </p>
+    <p>
+      resizeプロパティの値に応じて、完全固定や、横方向だけ固定、
+      縦方向だけ固定などの柔軟な対応ができます。
+    </p>
+    <div class="hx">
+      <h4 id="通常の状態（サイズ変更可能）">通常の状態（サイズ変更可能）</h4>
+    </div>
+
+    <p>
+      通常は下のテキストエリアのように、 右下の斜線部分をドラッグすることで、
+      大きさを変更することができます。
+    </p>
+    <textarea style="width: 100px; height: 50px" name="nameA">
+初期表示</textarea
+    >
+
+    <h4 id="css">CSS</h4>
+    <pre><code><span class="hljs-selector-tag">textarea</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">50px</span>;
+}
+</code></pre>
+    <div class="hx">
+      <h4 id="サイズ変更不可（固定）にする">サイズ変更不可（固定）にする</h4>
+    </div>
+
+    <textarea style="width: 100px; height: 50px; resize: none" name="nameB">
+初期表示</textarea
+    >
+
+    <h4 id="css-1">CSS</h4>
+    <pre><code><span class="hljs-selector-tag">textarea</span> {
+    <span class="hljs-attribute">resize</span>: none;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">50px</span>;
+}
+</code></pre>
+    <div class="hx">
+      <h4 id="横方向を可変、縦方向を固定にする">
+        横方向を可変、縦方向を固定にする
+      </h4>
+    </div>
+
+    <textarea
+      style="width: 100px; height: 50px; resize: horizontal"
+      name="nameB"
+    >
+初期表示</textarea
+    >
+
+    <h4 id="css-2">CSS</h4>
+    <pre><code><span class="hljs-selector-tag">textarea</span> {
+    <span class="hljs-attribute">resize</span>: horizontal;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">50px</span>;
+}
+</code></pre>
+    <div class="hx">
+      <h4 id="まとめ">まとめ</h4>
+    </div>
+
+    <p>
+      <strong>・</strong
+      >テキストエリアのサイズを変更不可にするにはresizeプロパティの値を「none」にします。
+    </p>
+    <p>
+      <strong>・</strong>横方向だけ可変にする場合は「horizontal」を指定します。
+    </p>
+    <p>
+      <strong>・</strong>縦方向だけ可変にする場合は「vertical」を指定します。
+    </p>
+
+    <p><br /><canvas style="border: none" height="2000" width="20"></canvas></p>
+  </body>
+</html>

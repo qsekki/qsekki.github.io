@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML: フォーム</title>
+
+    <!---->
+    <link
+      rel="stylesheet"
+      id="theme"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/ClearnessDark.css"
+    />
+    <!--->
+
+    <!--
+    <link rel="stylesheet" id="theme" href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/Clearness.css">
+    -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/MarkdownTOC.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="chap">
+      <hr />
+      <a href="./index.html"> Home </a>
+    </div>
+    <div class="hx">
+      <h2 id="html-フォーム">HTML: フォーム</h2>
+    </div>
+
+    <div class="sect"><hr /></div>
+
+    <div class="hx">
+      <h3 id="html-チェックボックスのサイズを1行で変更する方法">
+        HTML: チェックボックスのサイズを1行で変更する方法
+      </h3>
+    </div>
+
+    <p>
+      チェックボックス（checkbox）のデフォルトのサイズは小さくてチェックしにくいですよね。
+    </p>
+    <p>
+      ここでは、1行コードを付け足すだけで、
+      <strong>チェックボックス</strong
+      >の<strong>サイズ</strong>を<strong>変更</strong>できる方法を紹介します。
+    </p>
+    <h3 id="「transform」プロパティを使用する">
+      「transform」プロパティを使用する
+    </h3>
+    <p>「transform」プロパティは要素を変形させたい場合に使用します。</p>
+    <p>次のように指定すると 1.4 倍の大きさとなります。</p>
+    <pre><code><span class="hljs-attribute">transform</span>: scale(<span class="hljs-number">1</span>.<span class="hljs-number">4</span>);
+</code></pre>
+    <div class="hx">
+      <h4 id="デフォルトサイズ">デフォルトサイズ</h4>
+    </div>
+
+    <p>まずはデフォルトサイズのチェックボックスです。</p>
+    <p>
+      <input value="value2" name="categoryA" type="checkbox" />デフォルトサイズ
+    </p>
+    <div class="hx">
+      <h4 id="14倍サイズ">1.4倍サイズ</h4>
+    </div>
+
+    <p>
+      <input
+        style="transform: scale(1.4)"
+        value="value2"
+        name="categoryA"
+        type="checkbox"
+      />1.4倍サイズ
+    </p>
+    <p>このサイズなら、デフォルトサイズよりもチェックしやすくなりますね。</p>
+    <p>大きくしたチェックボックスのコードは次の通りです。</p>
+    <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">value</span>"" <span class="hljs-attr">class</span>=<span class="hljs-string">"big"</span>&gt;</span> 1.4倍サイズ<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+<span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.big</span> {
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">1.4</span>);
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+    <p>クラスを使わない単独の設定</p>
+    <pre><code>&lt;p&gt;&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"checkbox"</span> value<span class="hljs-string">""</span> style=<span class="hljs-string">"transform:scale(1.4)"</span>&gt; <span class="hljs-number">1.4</span>倍サイズ&lt;/p&gt;
+</code></pre>
+    <p>
+      このように、「transform」プロパティを使用することで、
+      簡単にチェックボックスのサイズを変更できます。
+    </p>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML: フォーム</title>
+
+    <!---->
+    <link
+      rel="stylesheet"
+      id="theme"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/ClearnessDark.css"
+    />
+    <!--->
+
+    <!--
+    <link rel="stylesheet" id="theme" href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/Clearness.css">
+    -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/MarkdownTOC.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="chap">
+      <hr />
+      <a href="./index.html"> Home </a>
+    </div>
+    <div class="hx">
+      <h2 id="html-フォーム">HTML: フォーム</h2>
+    </div>
+    <div class="sect"><hr /></div>
+    <div class="hx">
+      <h3 id="html-ラジオボタンに初期値を設定する">
+        HTML: ラジオボタンに初期値を設定する
+      </h3>
+    </div>
+
+    <p>
+      HTMLのラジオボタンには初期値を設定する必要があります。
+      初期値を設定するためには、
+      選択状態にしたいinput要素にchecked属性を記述します。
+      こうすることで同一グループ内のラジオボタンが1つ選択状態になります。
+    </p>
+    <p>
+      次のサンプルコードは、value属性の値が"bread"のラジオボタンに
+      checked属性を追加して初期値を設定しています。
+    </p>
+    <pre><code>&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"food"</span> value=<span class="hljs-string">"bread"</span> checked&gt;パン
+&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"food"</span> value=<span class="hljs-string">"rice"</span>&gt;米
+</code></pre>
+    <p>
+      <input checked="" value="bread" name="food" type="radio" />パン
+      <input value="rice" name="food" type="radio" />米
+    </p>
+    <p>
+      ラジオボタンで初期値を設定するためのchecked属性はブール属性とも言い、
+      属性値が無く、
+      タグ内に含まれているかどうかだけでオンとオフが切り替わります。
+    </p>
+    <p>
+      ちなみに「<strong>checked</strong>」の部分は「checked="checked"」
+      と記述しても機能しますが、
+      シンプルな書き方「checked」で記述する方がおすすめです。
+    </p>
+
+    <p><br /><canvas style="border: none" height="2000" width="20"></canvas></p>
+  </body>
+</html>

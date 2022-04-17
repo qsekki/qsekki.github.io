@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML: フォーム</title>
+
+    <!---->
+    <link
+      rel="stylesheet"
+      id="theme"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/ClearnessDark.css"
+    />
+    <!--->
+
+    <!--
+    <link rel="stylesheet" id="theme" href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/Clearness.css">
+    -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/MarkdownTOC.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="chap">
+      <hr />
+      <a href="./index.html"> Home </a>
+    </div>
+    <div class="hx">
+      <h2 id="html-フォーム">HTML: フォーム</h2>
+    </div>
+    <div class="sect"><hr /></div>
+    <div class="hx">
+      <h3 id="html-ラジオボタンを複数グループに分ける">
+        HTML: ラジオボタンを複数グループに分ける
+      </h3>
+    </div>
+
+    <p>
+      HTMLのラジオボタンを設置する場合は、
+      関連するラジオボタンをグループ化する必要があります。
+      グループ化はname属性に同じグループ名を指定します。
+    </p>
+    <p>
+      次のサンプルコードでは、
+      name属性に「foodA」を指定して、<strong>foodAグループ</strong>を作成しています。
+    </p>
+    <p>
+      <input checked="" value="bread" name="foodA" type="radio" />パン
+      <input value="rice" name="foodA" type="radio" />米
+    </p>
+    <pre><code>&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"foodA"</span> value=<span class="hljs-string">"bread"</span> checked&gt;パン
+&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"foodA"</span> value=<span class="hljs-string">"rice"</span>&gt;米
+</code></pre>
+    <p>
+      複数のグループを作成したい場合は、 別々のグループ名を指定します。
+      次のサンプルコードでは、
+      <strong>foodグループ</strong
+      >*と<strong>drinkグループ</strong>の2つのグループに分けています。
+    </p>
+    <p>
+      <input checked="" value="bread" name="food" type="radio" />パン
+      <input value="rice" name="food" type="radio" />米
+    </p>
+    <p>
+      <input checked="" value="coffee" name="drink" type="radio" />コーヒー
+      <input value="greentea" name="drink" type="radio" />お茶
+    </p>
+    <pre><code>&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"food"</span> value=<span class="hljs-string">"bread"</span> checked&gt;パン
+&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"food"</span> value=<span class="hljs-string">"rice"</span>&gt;米
+
+&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"drink"</span> value=<span class="hljs-string">"coffee"</span> checked&gt;コーヒー
+&lt;<span class="hljs-built_in">input</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"drink"</span> value=<span class="hljs-string">"greentea"</span>&gt;お茶
+</code></pre>
+    <p>
+      クライアント側のフォーム情報を送信した際に、
+      Webサーバー側ではname属性の値とvalue属性の値の両方を見ます。
+      name属性で<strong>グループ</strong>を判断し、value属性で選択されたラジオボタンを判断します。
+      グループが別であればvalue属性値がダブっていても問題ありません。
+    </p>
+
+    <p><br /><canvas style="border: none" height="2000" width="20"></canvas></p>
+  </body>
+</html>

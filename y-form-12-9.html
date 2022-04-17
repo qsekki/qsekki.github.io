@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML: フォーム</title>
+
+    <!---->
+    <link
+      rel="stylesheet"
+      id="theme"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/ClearnessDark.css"
+    />
+    <!--->
+
+    <!--
+    <link rel="stylesheet" id="theme" href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/Clearness.css">
+    -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/MarkdownTOC.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="chap">
+      <hr />
+      <a href="./index.html"> Home </a>
+    </div>
+    <div class="hx">
+      <h2 id="html-フォーム">HTML: フォーム</h2>
+    </div>
+    <div class="sect"><hr /></div>
+    <div class="hx">
+      <h3 id="css-プレースホルダーplaceholderの色を変更する">
+        CSS: プレースホルダー(placeholder)の色を変更する
+      </h3>
+    </div>
+
+    <p>
+      テキストボックスの入力ヒントを示す<strong
+        >プレースホルダー(placeholder) の色を変更したい場合</strong
+      >は、 疑似要素<strong>「::placeholder」</strong>を使用します。
+      デフォルトでは薄いグレーですが、好きな色に変更できます。
+    </p>
+    <p>
+      次のサンプルコードでは、
+      プレースホルダー(placeholder)の色を「dodgerblue」に変更します。
+    </p>
+    <pre><code><span class="hljs-selector-pseudo">::placeholder</span> {
+    <span class="hljs-attribute">color</span>: dodgerblue;
+}
+</code></pre>
+    <div class="hx">
+      <h4 id="特定の入力ボックスのみ色を変更する">
+        特定の入力ボックスのみ色を変更する
+      </h4>
+    </div>
+
+    <p>
+      上のコードのように「::placeholder」と記述した場合は、
+      全ての「input」要素と「textarea」要素に適用されます。
+    </p>
+    <p>
+      例えばtextare要素のみ色を変更したい場合は
+      「<strong>textarea::placeholder</strong>」と記述します。
+      要素にクラス名を指定して<strong>「.クラス名::placeholder」</strong>
+      のように記述することも可能です。
+    </p>
+    <div class="hx">
+      <h4 id="ieやedgeにも対応させる場合">IEやEdgeにも対応させる場合</h4>
+    </div>
+
+    <p>
+      IEや古いEdgeにも対応させる場合は次のように記述します。
+      但し、Edgeはver79以降（2020年1月）
+      であればプレースホルダーに対応しています。
+    </p>
+    <pre><code><span class="hljs-comment">/* Edge 79 より前の場合*/</span>
+<span class="hljs-selector-pseudo">::-ms-input-placeholder</span> {
+
+}
+
+<span class="hljs-comment">/* IE コロンは1つ*/</span>
+<span class="hljs-selector-pseudo">:-ms-input-placeholder</span> {
+
+}
+</code></pre>
+
+    <p><br /><canvas style="border: none" height="2000" width="20"></canvas></p>
+  </body>
+</html>

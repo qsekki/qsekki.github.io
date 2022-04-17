@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML: フォーム</title>
+
+    <!---->
+    <link
+      rel="stylesheet"
+      id="theme"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/ClearnessDark.css"
+    />
+    <!--->
+
+    <!--
+    <link rel="stylesheet" id="theme" href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/Clearness.css">
+    -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/MarkdownTOC.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="chap">
+      <hr />
+      <a href="./index.html"> Home </a>
+    </div>
+    <div style="width: 100%" class="hx">
+      <h2 id="html-フォーム">HTML: フォーム</h2>
+    </div>
+    <div class="sect"><hr /></div>
+    <div class="hx">
+      <h3 id="css-入力フォームのフォーカス時に-outline-を表示する">
+        CSS: 入力フォームのフォーカス時に outline を表示する
+      </h3>
+    </div>
+
+    <p>
+      CSS でinput 要素等の入力フォームのフォーカス時に、
+      アウトラインを表示する場合は outline プロパティを使用します。
+    </p>
+    <p>
+      アウトラインの色、スタイル、幅を個別に指定する場合は、
+      outline-color、outline-style、outline-width プロパティを使用します。
+    </p>
+    <p>
+      まとめて指定する場合は outlien
+      プロパティを使い、半角スペース区切りで指定します。
+    </p>
+    <div class="hx">
+      <h4 id="outlien-プロパティ-使用例">outlien プロパティ 使用例</h4>
+    </div>
+
+    <pre><code><span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:focus</span> {
+    <span class="hljs-attribute">outline-color</span>: red;      <span class="hljs-comment">/* 色 */</span>
+    <span class="hljs-attribute">outline-style</span>: solid;    <span class="hljs-comment">/* スタイル */</span>
+    <span class="hljs-attribute">outline-width</span>: <span class="hljs-number">1px</span>;      <span class="hljs-comment">/* 幅 */</span>
+}
+
+<span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:focus</span> {
+    <span class="hljs-attribute">outline</span>: <span class="hljs-number">1px</span> solid red;  <span class="hljs-comment">/* まとめて指定 */</span>
+}
+</code></pre>
+    <div class="hx">
+      <h4 id="フォーカス時にアウトライン表示するサンプルコード">
+        フォーカス時にアウトライン表示するサンプルコード
+      </h4>
+    </div>
+
+    <p>
+      下のサンプルは input 要素と textarea
+      要素があり、それぞれフォーカスが当たると 幅 2px
+      の赤色のアウトラインが表示されます。
+    </p>
+    <p><input type="text" /></p>
+
+    <p><textarea></textarea></p>
+
+    <style>
+      input,
+      textarea {
+        background-color: lavender;
+      }
+      input:focus {
+        outline: 2px solid red;
+      }
+      textarea:focus {
+        outline: 2px solid red;
+      }
+    </style>
+
+    <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">col</span>=<span class="hljs-string">"20"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-tag">input</span>, <span class="hljs-selector-tag">textarea</span> {
+        <span class="hljs-attribute">background-color</span>: lavender;
+    }
+    <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:focus</span> {
+        <span class="hljs-attribute">outline</span>: <span class="hljs-number">2px</span> solid red;
+    }
+    <span class="hljs-selector-tag">textarea</span><span class="hljs-selector-pseudo">:focus</span> {
+        <span class="hljs-attribute">outline</span>: <span class="hljs-number">2px</span> solid red;
+    }
+
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+
+    <p><br /><canvas style="border: none" height="2000" width="20"></canvas></p>
+  </body>
+</html>

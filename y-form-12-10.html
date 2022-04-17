@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML: フォーム</title>
+
+    <!---->
+    <link
+      rel="stylesheet"
+      id="theme"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/ClearnessDark.css"
+    />
+    <!--->
+
+    <!--
+    <link rel="stylesheet" id="theme" href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/Clearness.css">
+    -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/MarkdownTOC.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="chap">
+      <hr />
+      <a href="./index.html"> Home </a>
+    </div>
+
+    <div class="hx">
+      <h2 id="html-フォーム">HTML: フォーム</h2>
+    </div>
+
+    <div class="sect"><hr /></div>
+    <div class="hx">
+      <h3 id="プレースホルダーplaceholderで改行したい場合">
+        プレースホルダー(placeholder)で改行したい場合
+      </h3>
+    </div>
+
+    <p>
+      <strong>プレースホルダー(placeholder)で改行したい場合</strong>は、
+      いくつか方法があります。 ここではplaceholder属性に特殊文字を使う方法と、
+      JavaScriptでplaceholderプロパティを設定する方法の2通りを紹介します。
+    </p>
+    <div class="hx">
+      <h4 id="特殊文字を使って改行を入れる">特殊文字を使って改行を入れる</h4>
+    </div>
+
+    <p>
+      placeholder属性の属性値に改行を表す特殊文字を入れます。
+      特殊文字は<strong>「&amp;#10;」</strong>と<strong>「&amp;#13;」</strong>の2つあります。
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th align="left"><div style="text-align: center">特殊文字</div></th>
+          <th align="left"><div style="text-align: center">説明</div></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="left">&amp;#10;</td>
+          <td align="left">改行</td>
+        </tr>
+        <tr>
+          <td align="left">&amp;#13;</td>
+          <td align="left">復帰</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+
+    <p>
+      「&amp;#13;&amp;#10;」でもいいですし、
+      「&amp;#13;」だけでも「&amp;#10;」だけでも機能します。
+    </p>
+    <p>
+      次のサンプルコードでは、 プレースホルダー(placeholder)に改行をいれて、
+      3行に渡ってテキストを表示しています。
+      改行には「&amp;#10;」のみを使用しています。
+    </p>
+    <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">"4"</span> 
+<span class="hljs-attr">placeholder</span>=<span class="hljs-string">"テキスト1<span class="hljs-symbol">&amp;#10;</span>テキスト2<span class="hljs-symbol">&amp;#10;</span>テキスト3"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+</code></pre>
+    <p><strong>表示結果</strong></p>
+    <textarea
+      placeholder="テキスト1
+テキスト2
+テキスト3"
+      rows="4"
+    ></textarea>
+
+    <p>
+      注意：Mac環境では
+      プレースホルダーの改行が機能しない可能性があるので確認が必要です。
+    </p>
+    <div class="hx">
+      <h4 id="javascriptを使う">JavaScriptを使う</h4>
+    </div>
+
+    <p>
+      JavaScriptを使ってplaceholderプロパティを設定する方法は、
+      プレースホルダー(placeholder)として入力する文字数が多い場合におすすめです。
+    </p>
+    <p>HTMLとJavaScriptコードは次の通りです。</p>
+    <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"area1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span> 
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+
+<span class="hljs-keyword">let</span> e = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"area1"</span>);
+<span class="hljs-keyword">let</span> s = <span class="hljs-string">`テキスト1
+テキスト2
+テキスト3`</span>;
+e.placeholder = s;
+
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+    <p>
+      JavaScriptで複数行の文字列を意味する「`（バッククォート）」を使用すれば、
+      文字列として記述したままにプレースホルダーに表示できるので見やすくなります。
+      プレースホルダーの文字数や行数が多い場合はこちらの方がおすすめです。
+    </p>
+
+    <p><br /><canvas style="border: none" height="2000" width="20"></canvas></p>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML: フォーム</title>
+
+    <!---->
+    <link
+      rel="stylesheet"
+      id="theme"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/ClearnessDark.css"
+    />
+    <!--->
+
+    <!--
+    <link rel="stylesheet" id="theme" href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/Clearness.css">
+    -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/volca/markdown-preview/theme/MarkdownTOC.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="chap">
+      <hr />
+      <a href="./index.html"> Home </a>
+    </div>
+
+    <div class="hx">
+      <h2 id="html-フォーム">HTML: フォーム</h2>
+    </div>
+
+    <div class="sect"><hr /></div>
+    <div class="hx">
+      <h3 id="プレースホルダーplaceholderの文字位置を調整する">
+        プレースホルダー(placeholder)の文字位置を調整する
+      </h3>
+    </div>
+
+    <p>
+      入力ヒントを示すプレースホルダー(placeholder)
+      の文字位置を変更したい場合は、 疑似要素「::placeholder」を使用します。
+    </p>
+    <p>
+      「テキストボックスの入力文字は左側だけど、プレースホルダーは中央に表示する」
+      といった設定が可能です。
+      文字位置を指定するには「text-align」プロパティを使用します。
+    </p>
+    <p>
+      以下のサンプルコードは、
+      プレースホルダー(placeholder)の位置を中央にしています。
+    </p>
+    <pre><code><span class="hljs-selector-pseudo">::placeholder</span> {
+    <span class="hljs-attribute">text-align</span>: center;
+}
+</code></pre>
+    <p><strong>表示結果</strong></p>
+    <input placeholder="入力ヒント" value="" name="user-name" type="text" />
+    <br /><br />
+
+    <p>
+      <a
+        href="https://step-learn.com/article/html-css/103-placeholder-align.html"
+        >本元の参照</a
+      >
+      <br /><br />
+    </p>
+    <style>
+      ::placeholder {
+        text-align: center;
+      }
+    </style>
+
+    <div class="hx">
+      <h4 id="paddingプロパティによる位置指定はブラウザによる">
+        paddingプロパティによる位置指定はブラウザによる
+      </h4>
+    </div>
+
+    <p>
+      「text-align」プロパティでは
+      「中央・左・右」といったざっくりとした位置を指定できますが、
+      「padding」プロパティを使用するともっと細かい位置指定ができます。
+    </p>
+    <p>
+      ただし「padding」プロパティが機能するブラウザと、
+      機能しないブラウザがあるので注意が必要です。 試してみたところ、Google
+      ChromeやMicrosoft Edgeでは機能しましたが、 Firefoxでは機能しませんでした。
+    </p>
+    <p>
+      今後ブラウザの仕様が変わる可能性もありますので、
+      「padding」プロパティを使う場合は事前に確認してください。
+    </p>
+
+    <p><br /><canvas style="border: none" height="2000" width="20"></canvas></p>
+  </body>
+</html>
