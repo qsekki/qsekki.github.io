@@ -1,3 +1,8 @@
+---
+layout: single
+title: Title of Your Post
+---
+
 ## Welcome to GitHub Pages
 
 ### [基本的な書き込みとフォーマットの構文(origine)](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
